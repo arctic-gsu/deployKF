@@ -131,7 +131,7 @@ dex:
 
   ## dex connectors
   ##
-  connectors: ["OpenID Connect"]
+  connectors: "oidc"
 
 
 ########################################
