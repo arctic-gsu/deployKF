@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kf-tools--notebooks--jupyter-web-app
+  namespace: "argocd"
+  labels:
+    app.kubernetes.io/name: jupyter-web-app
+    app.kubernetes.io/component: kubeflow-tools
+    app.kubernetes.io/part-of: deploykf
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: "default"
+  source:
+    repoURL: "https://github.com/arctic-gsu/deployKF/deploy"
+    targetRevision: "main"
+    path: "GENERATOR_OUTPUT/manifests/kubeflow-tools/notebooks/jupyter-web-app"
+  destination:
+    server: "https://10.245.19.201:6443"
+    namespace: kubeflow
