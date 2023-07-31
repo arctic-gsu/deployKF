@@ -20,7 +20,7 @@ spec:
       valueFiles:
         - values-overrides.yaml
   destination:
-    server: "https://10.245.19.201:6443"
+    server: "https://kubernetes.default.svc"
     namespace: "deploykf-auth"
   syncPolicy:
     syncOptions:

@@ -16,5 +16,5 @@ spec:
     targetRevision: "main"
     path: "GENERATOR_OUTPUT/manifests/kubeflow-tools/tensorboards/tensorboard-controller"
   destination:
-    server: "https://10.245.19.201:6443"
+    server: "https://kubernetes.default.svc"
     namespace: kubeflow
