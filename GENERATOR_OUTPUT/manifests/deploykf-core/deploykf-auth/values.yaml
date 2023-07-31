@@ -131,7 +131,7 @@ dex:
 
   ## dex connectors
   ##
-  connectors: ["oidc"]
+  connectors: []
 
 
 ########################################
