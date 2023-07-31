@@ -13,8 +13,9 @@ resources:
   - resources/generate-profile-resources-clusterpolicy.yaml
   - resources/restart-on-pipeline-configmap-update-clusterpolicy.yaml
   - resources/clone-bucket-secret-clusterpolicy.yaml
-  - resources/clone-mysql-secret-clusterpolicy.yaml
+  - resources/restart-on-mysql-secret-update-clusterpolicy.yaml
   - resources/pipelines-bucket-secret.yaml
+  - resources/pipelines-mysql-secret.yaml
 
 patchesStrategicMerge:
   - patches/patch-cache-server-deployment.yaml
@@ -86,7 +87,7 @@ configMapGenerator:
       ## MySQL Configs
       ## ================================
       - ConMaxLifeTime="120s"
-      - dbHost="deploykf-mysql.deploykf-mysql.svc.cluster.local"
+      - dbHost="mysql.example.com"
       - dbPort="3306"
       - cacheDb="kfp_cache"
       - mlmdDb="kfp_metadata"
