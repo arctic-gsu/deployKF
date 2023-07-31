@@ -13,7 +13,7 @@ deployKF:
     namespace: "deploykf-istio-gateway"
     serviceAccount: "deploykf-gateway"
     name: "deploykf-gateway"
-    hostname: "deploykf.example.com"
+    hostname: "deploykf.rs.gsu.edu"
 
 
 ########################################
@@ -93,7 +93,7 @@ centralDashboard:
         iframe: false
         text: Argo Server
         icon: settings-input-composite
-        link: "https://argo-server.deploykf.example.com:8443"
+        link: "https://argo-server.deploykf.rs.gsu.edu:8443"
 
     ## quick action links that appear in the home page
     ##
