@@ -51,12 +51,12 @@ spec:
             - name: DBCONFIG_USER
               valueFrom:
                 secretKeyRef:
-                  name: "pipelines-mysql-secret"
+                  name: "cloned--pipelines-mysql-secret"
                   key: "username"
             - name: DBCONFIG_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: "pipelines-mysql-secret"
+                  name: "cloned--pipelines-mysql-secret"
                   key: "password"
 
             ## ================================
