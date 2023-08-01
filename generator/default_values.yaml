@@ -425,7 +425,7 @@ deploykf_core:
             value: "bbbbbbbbbbbbbbbb"
             existingSecret: ""
             existingSecretKey: "client_secret"
-            generateSecret: false
+            generateSecret: true
 
         ## OpenID client for Minio Console
         ##  - [WARNING] it is strongly recommended to enable `generateSecret` or use a custom value
