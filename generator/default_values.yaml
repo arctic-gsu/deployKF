@@ -472,7 +472,7 @@ deploykf_core:
           value: "cccccccccccccccc"
           existingSecret: ""
           existingSecretKey: "cookie_secret"
-          generateSecret: false
+          generateSecret: true
 
 
   ## --------------------------------------
