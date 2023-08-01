@@ -37,10 +37,10 @@ spec:
             - name: DB_USER
               valueFrom:
                 secretKeyRef:
-                  name: "cloned--katib-mysql-secret"
+                  name: "katib-mysql-secret"
                   key: "username"
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: "cloned--katib-mysql-secret"
+                  name: "katib-mysql-secret"
                   key: "password"
