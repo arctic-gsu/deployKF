@@ -10,8 +10,7 @@ resources:
   - upstream/apps/katib/upstream/installs/katib-with-kubeflow
 
   ## local
-  - resources/restart-on-mysql-secret-update-clusterpolicy.yaml
-  - resources/pipelines-mysql-secret.yaml
+  - resources/clone-mysql-secret-clusterpolicy.yaml
 
 patchesStrategicMerge:
   - patches/patch-katib-db-manager-deployment.yaml
@@ -25,7 +24,7 @@ patchesStrategicMerge:
 configMapGenerator:
   - name: katib-mysql-config
     literals:
-      - dbHost="arcresdb.rs.gsu.edu"
+      - dbHost="deploykf-mysql.deploykf-mysql.svc.cluster.local"
       - dbPort="3306"
       - dbName="katib"
 
