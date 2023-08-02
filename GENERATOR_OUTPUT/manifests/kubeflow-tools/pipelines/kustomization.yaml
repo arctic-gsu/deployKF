@@ -87,7 +87,7 @@ configMapGenerator:
       ## MySQL Configs
       ## ================================
       - ConMaxLifeTime="120s"
-      - dbHost="10.245.18.222"
+      - dbHost="arcresdb.rs.gsu.edu"
       - dbPort="3306"
       - cacheDb="kfp_cache"
       - mlmdDb="kfp_metadata"
