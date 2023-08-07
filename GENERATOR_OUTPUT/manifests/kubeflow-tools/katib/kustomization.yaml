@@ -25,7 +25,7 @@ patchesStrategicMerge:
 configMapGenerator:
   - name: katib-mysql-config
     literals:
-      - dbHost="10.245.18.222"
+      - dbHost="arccfdevdb01.rs.gsu.edu"
       - dbPort="3306"
       - dbName="katib"
 
