@@ -93,7 +93,7 @@ centralDashboard:
         iframe: false
         text: Argo Server
         icon: settings-input-composite
-        link: "https://argo-server.deploykf.rs.gsu.edu"
+        link: "https://argo-server.deploykf.rs.gsu.edu:8443"
 
     ## quick action links that appear in the home page
     ##

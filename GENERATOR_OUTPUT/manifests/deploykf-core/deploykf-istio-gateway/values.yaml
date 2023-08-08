@@ -35,7 +35,7 @@ deployKF:
     hostname: "deploykf.rs.gsu.edu"
     ports:
       http: 8080
-      https: 443
+      https: 8443
     tls:
       enabled: true
     enableProxyProtocol: false
@@ -84,9 +84,9 @@ gateway:
         protocol: TCP
         targetPort: 8080
       - name: https
-        port: 443
+        port: 8443
         protocol: TCP
-        targetPort: 443
+        targetPort: 8443
 
   resources:
     requests:
