@@ -43,7 +43,7 @@ deployKF:
       objectStore:
         useExternal: true
         auth:
-          fromEnv: false
+          fromEnv: true
 
   gateway:
     namespace: "deploykf-istio-gateway"

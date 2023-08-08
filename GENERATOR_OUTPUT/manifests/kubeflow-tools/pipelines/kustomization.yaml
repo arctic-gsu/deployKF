@@ -12,9 +12,7 @@ resources:
   ## local
   - resources/generate-profile-resources-clusterpolicy.yaml
   - resources/restart-on-pipeline-configmap-update-clusterpolicy.yaml
-  - resources/clone-bucket-secret-clusterpolicy.yaml
   - resources/restart-on-mysql-secret-update-clusterpolicy.yaml
-  - resources/pipelines-bucket-secret.yaml
   - resources/pipelines-mysql-secret.yaml
 
 patchesStrategicMerge:
