@@ -93,6 +93,12 @@ spec:
                   name: pipeline-install-config
                   key: bucketPort
             - name: OBJECTSTORECONFIG_ACCESSKEY
-              $patch: delete
+              valueFrom:
+                secretKeyRef:
+                  name: "cloned--kubeflow-pipelines--backend-object-store-auth"
+                  key: "access_key"
             - name: OBJECTSTORECONFIG_SECRETACCESSKEY
-              $patch: delete
+              valueFrom:
+                secretKeyRef:
+                  name: "cloned--kubeflow-pipelines--backend-object-store-auth"
+                  key: "secret_key"

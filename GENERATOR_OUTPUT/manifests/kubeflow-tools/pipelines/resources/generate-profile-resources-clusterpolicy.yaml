@@ -268,6 +268,16 @@ spec:
                         value: "9000"
                       - name: MINIO_SSL
                         value: "true"
+                      - name: MINIO_ACCESS_KEY
+                        valueFrom:
+                          secretKeyRef:
+                            name: "cloned--pipelines-object-store-auth"
+                            key: "{{ tool_config.data.objectStoreAuth_existingSecretAccessKeyKey }}"
+                      - name: MINIO_SECRET_KEY
+                        valueFrom:
+                          secretKeyRef:
+                            name: "cloned--pipelines-object-store-auth"
+                            key: "{{ tool_config.data.objectStoreAuth_existingSecretSecretKeyKey }}"
 
                       ## ================================
                       ## S3 - Object Store Configs
@@ -276,6 +286,16 @@ spec:
                         value: ""
                       - name: AWS_S3_ENDPOINT
                         value: "minio.rs.gsu.edu:9000"
+                      - name: AWS_ACCESS_KEY_ID
+                        valueFrom:
+                          secretKeyRef:
+                            name: "cloned--pipelines-object-store-auth"
+                            key: "{{ tool_config.data.objectStoreAuth_existingSecretAccessKeyKey }}"
+                      - name: AWS_SECRET_ACCESS_KEY
+                        valueFrom:
+                          secretKeyRef:
+                            name: "cloned--pipelines-object-store-auth"
+                            key: "{{ tool_config.data.objectStoreAuth_existingSecretSecretKeyKey }}"
 
     ################################################################################
     ## Service/ml-pipeline-ui-artifact
@@ -355,7 +375,12 @@ spec:
                 region: ""
                 ## NOTE: we must escape with "\{{" because Kyverno uses the same template delimiters as argo
                 keyFormat: "artifacts/\{{ workflow.namespace }}/\{{ workflow.name }}/\{{ workflow.creationTimestamp.Y }}/\{{ workflow.creationTimestamp.m }}/\{{ workflow.creationTimestamp.d }}/\{{ pod.name }}"
-                useSDKCreds: true
+                accessKeySecret:
+                  name: "cloned--pipelines-object-store-auth"
+                  key: "{{ tool_config.data.objectStoreAuth_existingSecretAccessKeyKey }}"
+                secretKeySecret:
+                  name: "cloned--pipelines-object-store-auth"
+                  key: "{{ tool_config.data.objectStoreAuth_existingSecretSecretKeyKey }}"
 
     ################################################################################
     ## ConfigMap/kfp-launcher

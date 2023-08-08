@@ -76,9 +76,15 @@ spec:
                   name: pipeline-install-config
                   key: bucketSecure
             - name: MINIO_ACCESS_KEY
-              $patch: delete
+              valueFrom:
+                secretKeyRef:
+                  name: "cloned--kubeflow-pipelines--backend-object-store-auth"
+                  key: "access_key"
             - name: MINIO_SECRET_KEY
-              $patch: delete
+              valueFrom:
+                secretKeyRef:
+                  name: "cloned--kubeflow-pipelines--backend-object-store-auth"
+                  key: "secret_key"
 
             ## ================================
             ## S3 - Object Store Configs
@@ -95,9 +101,15 @@ spec:
                   name: pipeline-install-config
                   key: bucketEndpoint
             - name: AWS_ACCESS_KEY_ID
-              $patch: delete
+              valueFrom:
+                secretKeyRef:
+                  name: "cloned--kubeflow-pipelines--backend-object-store-auth"
+                  key: "access_key"
             - name: AWS_SECRET_ACCESS_KEY
-              $patch: delete
+              valueFrom:
+                secretKeyRef:
+                  name: "cloned--kubeflow-pipelines--backend-object-store-auth"
+                  key: "secret_key"
 
             ## ================================
             ## Other Configs
