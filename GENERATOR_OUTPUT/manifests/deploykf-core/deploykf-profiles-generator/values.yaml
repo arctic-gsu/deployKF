@@ -3,9 +3,9 @@
 ########################################
 deployKF_helpers:
   deploykf_profiles:
-    users_id_mapping: {"neranjan":{"email":"neranjan@gsu.edu","id":"neranjan"},"user-1":{"email":"user1@example.com","id":"user-1"},"user-2":{"email":"user2@example.com","id":"user-2"}}
-    profiles_users_access_mapping: {"team-1":{"neranjan":{"notebooksAccess":true,"role":"edit"},"user-1":{"notebooksAccess":true,"role":"edit"},"user-2":{"notebooksAccess":true,"role":"edit"}},"team-1-prod":{"neranjan":{"notebooksAccess":false,"role":"view"},"user-1":{"notebooksAccess":false,"role":"view"},"user-2":{"notebooksAccess":false,"role":"view"}}}
-    users_profiles_access_mapping: {"neranjan":{"team-1":{"notebooksAccess":true,"role":"edit"},"team-1-prod":{"notebooksAccess":false,"role":"view"}},"user-1":{"team-1":{"notebooksAccess":true,"role":"edit"},"team-1-prod":{"notebooksAccess":false,"role":"view"}},"user-2":{"team-1":{"notebooksAccess":true,"role":"edit"},"team-1-prod":{"notebooksAccess":false,"role":"view"}}}
+    users_id_mapping: {"chris":{"email":"cchildress@gsu.edu","id":"chris"},"neranjan":{"email":"neranjan@gsu.edu","id":"neranjan"},"sanju":{"email":"stimsina@gsu.edu","id":"sanju"},"shruti":{"email":"sshrestha8@gsu.edu","id":"shruti"},"user-1":{"email":"user1@example.com","id":"user-1"},"user-2":{"email":"user2@example.com","id":"user-2"}}
+    profiles_users_access_mapping: {"team-1":{"chris":{"notebooksAccess":true,"role":"edit"},"neranjan":{"notebooksAccess":true,"role":"edit"},"sanju":{"notebooksAccess":true,"role":"edit"},"shruti":{"notebooksAccess":true,"role":"edit"},"user-1":{"notebooksAccess":true,"role":"edit"},"user-2":{"notebooksAccess":true,"role":"edit"}},"team-1-prod":{"chris":{"notebooksAccess":false,"role":"view"},"neranjan":{"notebooksAccess":false,"role":"view"},"sanju":{"notebooksAccess":false,"role":"view"},"shruti":{"notebooksAccess":false,"role":"view"},"user-1":{"notebooksAccess":false,"role":"view"},"user-2":{"notebooksAccess":false,"role":"view"}}}
+    users_profiles_access_mapping: {"chris":{"team-1":{"notebooksAccess":true,"role":"edit"},"team-1-prod":{"notebooksAccess":false,"role":"view"}},"neranjan":{"team-1":{"notebooksAccess":true,"role":"edit"},"team-1-prod":{"notebooksAccess":false,"role":"view"}},"sanju":{"team-1":{"notebooksAccess":true,"role":"edit"},"team-1-prod":{"notebooksAccess":false,"role":"view"}},"shruti":{"team-1":{"notebooksAccess":true,"role":"edit"},"team-1-prod":{"notebooksAccess":false,"role":"view"}},"user-1":{"team-1":{"notebooksAccess":true,"role":"edit"},"team-1-prod":{"notebooksAccess":false,"role":"view"}},"user-2":{"team-1":{"notebooksAccess":true,"role":"edit"},"team-1-prod":{"notebooksAccess":false,"role":"view"}}}
 
   kubeflow:
     pipelines:
@@ -110,12 +110,12 @@ profileDefaults:
 ## user entities
 ##  - a list of users that can be referenced when defining profile members
 ##
-users: [{"email":"user1@example.com","id":"user-1"},{"email":"user2@example.com","id":"user-2"},{"email":"neranjan@gsu.edu","id":"neranjan"}]
+users: [{"email":"user1@example.com","id":"user-1"},{"email":"user2@example.com","id":"user-2"},{"email":"neranjan@gsu.edu","id":"neranjan"},{"email":"cchildress@gsu.edu","id":"chris"},{"email":"stimsina@gsu.edu","id":"sanju"},{"email":"sshrestha8@gsu.edu","id":"shruti"}]
 
 ## group entities
 ##  - a list of groups that can be referenced when defining profile members
 ##
-groups: [{"id":"team-1","users":["user-1","user-2","neranjan"]}]
+groups: [{"id":"team-1","users":["user-1","user-2","neranjan","chris","sanju","shruti"]}]
 
 ## profile definitions
 ##  - a list of profile definitions to be generated

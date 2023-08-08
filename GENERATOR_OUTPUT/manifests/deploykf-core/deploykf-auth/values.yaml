@@ -127,7 +127,7 @@ dex:
 
   ## dex static passwords
   ##
-  staticPasswords: [{"email":"admin@example.com","password":{"value":"admin"}},{"email":"user1@example.com","password":{"value":"user1"}},{"email":"user2@example.com","password":{"value":"user2"}},{"email":"neranjan@gsu.edu","password":{"value":"testPassword"}}]
+  staticPasswords: [{"email":"admin@example.com","password":{"value":"admin"}},{"email":"user1@example.com","password":{"value":"user1"}},{"email":"user2@example.com","password":{"value":"user2"}},{"email":"neranjan@gsu.edu","password":{"value":"testPassword"}},{"email":"sshrestha8@gsu.edu","password":{"value":"theme-daisy-muse"}},{"email":"stimsina@gsu.edu","password":{"value":"accustom-burnish-fight"}},{"email":"cchildress@gsu.edu","password":{"value":"natty-choppy-pucker"}}]
 
   ## dex connectors
   ##
