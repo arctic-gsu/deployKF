@@ -3,9 +3,9 @@
 ########################################
 deployKF_helpers:
   deploykf_profiles:
-    users_id_mapping: {"user-1":{"email":"user1@example.com","id":"user-1"},"user-2":{"email":"user2@example.com","id":"user-2"}}
-    profiles_users_access_mapping: {"team-1":{"user-1":{"notebooksAccess":true,"role":"edit"},"user-2":{"notebooksAccess":true,"role":"edit"}},"team-1-prod":{"user-1":{"notebooksAccess":false,"role":"view"},"user-2":{"notebooksAccess":false,"role":"view"}}}
-    users_profiles_access_mapping: {"user-1":{"team-1":{"notebooksAccess":true,"role":"edit"},"team-1-prod":{"notebooksAccess":false,"role":"view"}},"user-2":{"team-1":{"notebooksAccess":true,"role":"edit"},"team-1-prod":{"notebooksAccess":false,"role":"view"}}}
+    users_id_mapping: {"neranjan":{"email":"neranjan@gsu.edu","id":"neranjan"},"user-1":{"email":"user1@example.com","id":"user-1"},"user-2":{"email":"user2@example.com","id":"user-2"}}
+    profiles_users_access_mapping: {"team-1":{"neranjan":{"notebooksAccess":true,"role":"edit"},"user-1":{"notebooksAccess":true,"role":"edit"},"user-2":{"notebooksAccess":true,"role":"edit"}},"team-1-prod":{"neranjan":{"notebooksAccess":false,"role":"view"},"user-1":{"notebooksAccess":false,"role":"view"},"user-2":{"notebooksAccess":false,"role":"view"}}}
+    users_profiles_access_mapping: {"neranjan":{"team-1":{"notebooksAccess":true,"role":"edit"},"team-1-prod":{"notebooksAccess":false,"role":"view"}},"user-1":{"team-1":{"notebooksAccess":true,"role":"edit"},"team-1-prod":{"notebooksAccess":false,"role":"view"}},"user-2":{"team-1":{"notebooksAccess":true,"role":"edit"},"team-1-prod":{"notebooksAccess":false,"role":"view"}}}
 
   kubeflow:
     pipelines:
@@ -110,12 +110,12 @@ profileDefaults:
 ## user entities
 ##  - a list of users that can be referenced when defining profile members
 ##
-users: [{"email":"user1@example.com","id":"user-1"},{"email":"user2@example.com","id":"user-2"}]
+users: [{"email":"user1@example.com","id":"user-1"},{"email":"user2@example.com","id":"user-2"},{"email":"neranjan@gsu.edu","id":"neranjan"}]
 
 ## group entities
 ##  - a list of groups that can be referenced when defining profile members
 ##
-groups: [{"id":"team-1","users":["user-1","user-2"]}]
+groups: [{"id":"team-1","users":["user-1","user-2","neranjan"]}]
 
 ## profile definitions
 ##  - a list of profile definitions to be generated
