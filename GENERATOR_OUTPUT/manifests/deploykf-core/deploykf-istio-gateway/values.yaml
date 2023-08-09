@@ -69,7 +69,7 @@ gateway:
 
   service:
     annotations: {}
-    type: "LoadBalancer"
+    type: "ClusterIP"
     loadBalancerIP: ""
     loadBalancerSourceRanges: []
     externalTrafficPolicy: ""
