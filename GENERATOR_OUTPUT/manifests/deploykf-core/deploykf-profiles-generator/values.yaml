@@ -83,7 +83,7 @@ profileDefaults:
 
   ## the default list of plugins for profiles, when not explicitly specified
   ##
-  plugins: []
+  plugins: [{"configExistingSecret":"my-dex-plugins-secret","existingSecretKey":"SecretKey","kind":"keycloak-gatekeeper"}]
 
   ## the default resource quota for profiles, when not explicitly specified
   ##  - spec for ResourceQuotaSpec:
