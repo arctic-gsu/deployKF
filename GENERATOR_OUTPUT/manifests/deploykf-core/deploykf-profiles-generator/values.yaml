@@ -83,7 +83,7 @@ profileDefaults:
 
   ## the default list of plugins for profiles, when not explicitly specified
   ##
-  plugins: []
+  plugins: [{"kind":"keycloak-gatekeeper","spec":{"client_id":"kubeflow","client_secret":"91ad7b6e-c9bf-4252-837b-e14900800b96","discovery_url":"https://hecate.rs.gsu.edu/auth/realms/arctic","redirection_url":"https://deploykf.rs.gsu.edu/dex/callback","secure_cookie":true}}]
 
   ## the default resource quota for profiles, when not explicitly specified
   ##  - spec for ResourceQuotaSpec:
