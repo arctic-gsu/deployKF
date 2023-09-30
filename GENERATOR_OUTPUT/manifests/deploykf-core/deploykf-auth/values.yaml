@@ -131,7 +131,7 @@ dex:
 
   ## dex connectors
   ##
-  connectors: [{"config":{"clientID":"kubeflow","clientSecret":"9b020563-2d18-46cf-9a5a-c73136aff66e","issuer":"https://hecate.rs.gsu.edu/auth/realms/arctic","redirectURI":"https://deploykf.rs.gsu.edu:8443/dex/callback"},"id":"kubeflow","name":"GSU Credentials","type":"oidc"}]
+  connectors: [{"configExistingSecret":"my-dex-connector-secret","existingSecretKey":"existingSecretKey","id":"kubeflow","name":"GSU Credentials","type":"oidc"}]
 
 
 ########################################
