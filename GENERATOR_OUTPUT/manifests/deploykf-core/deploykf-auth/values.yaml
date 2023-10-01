@@ -131,7 +131,7 @@ dex:
 
   ## dex connectors
   ##
-  connectors: [{"configExistingSecret":"my-dex-connector-secret","configexistingSecretKey":"existingSecretKey","id":"kubeflow","name":"GSU Credentials","type":"oidc"}]
+  connectors: [{"configExistingSecret":"my-dex-connector-secret","configexistingSecretKey":"configExistingSecretKey","id":"kubeflow","name":"GSU Credentials","type":"oidc"}]
 
 
 ########################################
