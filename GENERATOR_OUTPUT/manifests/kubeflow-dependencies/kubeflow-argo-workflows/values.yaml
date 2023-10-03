@@ -15,11 +15,11 @@ deployKF_helpers:
       endpoint: "minio.rs.gsu.edu:9000"
       not_use_ssl: false
       auth:
-        source_secret_name: "kubeflow-pipelines--backend-object-store-auth"
+        source_secret_name: "kubeflow-minio-credentials"
         source_secret_namespace: "kubeflow"
         secret_name: "cloned--kubeflow-pipelines--backend-object-store-auth"
-        access_key_key: "access_key"
-        secret_key_key: "secret_key"
+        access_key_key: "AWS_ACCESS_KEY_ID"
+        secret_key_key: "AWS_SECRET_ACCESS_KEY"
 
 
 ########################################
