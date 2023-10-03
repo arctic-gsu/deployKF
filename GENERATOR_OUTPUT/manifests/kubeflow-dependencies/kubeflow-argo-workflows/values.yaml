@@ -52,7 +52,7 @@ deployKF:
       region: ""
     objectStore:
       auth:
-        fromEnv: false
+        fromEnv: true
 
 
 ########################################
