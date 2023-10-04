@@ -12,8 +12,8 @@ deployKF_helpers:
       object_store:
         profile:
           cloned_secret_name: "cloned--pipelines-object-store-auth"
-          generated_access_key_key: "AWS_ACCESS_KEY_ID"
-          generated_secret_key_key: "AWS_SECRET_ACCESS_KEY"
+          generated_access_key_key: "access_key"
+          generated_secret_key_key: "secret_key"
 
 
 ########################################
@@ -103,9 +103,9 @@ profileDefaults:
       ##
       objectStoreAuth:
         existingSecret: "kubeflow-pipelines--profile-object-store-auth--{profile_name}"
-        existingSecretNamespace: "kubeflow"
-        existingSecretAccessKeyKey: "AWS_ACCESS_KEY_ID"
-        existingSecretSecretKeyKey: "AWS_SECRET_ACCESS_KEY"
+        existingSecretNamespace: ""
+        existingSecretAccessKeyKey: "access_key"
+        existingSecretSecretKeyKey: "secret_key"
 
 ## user entities
 ##  - a list of users that can be referenced when defining profile members
