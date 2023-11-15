@@ -68,7 +68,7 @@ gateway:
     annotations: {}
 
   service:
-    annotations: {"tls":{"certificateRefs":[{"name":"kubeflow-tls-secret"}],"mode":"Terminate"}}
+    annotations: {}
     type: "LoadBalancer"
     loadBalancerIP: ""
     loadBalancerSourceRanges: []
